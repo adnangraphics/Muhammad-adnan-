@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adnan Graphics | عدنان گرافکس - Professional Design & Printing Services</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            cyan: '#00F2FE',
+                            purple: '#7F00FF',
+                            accent: '#FF007F',
+                            dark: '#0B0F17',
+                            card: '#151C28',
+                            emerald: '#10B981'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        urdu: ['Noto Nastaliq Urdu', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-card {
+            background: rgba(21, 28, 40, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .light .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        .glass-nav {
+            background: rgba(11, 15, 23, 0.88);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .light .glass-nav {
+            background: rgba(255, 255, 255, 0.92);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #00F2FE 0%, #4FACFE 50%, #7F00FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-effect {
+            box-shadow: 0 0 25px rgba(0, 242, 254, 0.25);
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 35px rgba(0, 242, 254, 0.45);
+        }
+        .gradient-btn {
+            background: linear-gradient(135deg, #00F2FE 0%, #7F00FF 100%);
+            transition: all 0.3s ease;
+        }
+        .gradient-btn:hover {
+            opacity: 0.92;
+            transform: translateY(-2px);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0F17;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1F293D;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00F2FE;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark dark:bg-brand-dark text-slate-100 dark:text-slate-100 font-sans antialiased selection:bg-brand-cyan selection:text-black transition-colors duration-300">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl gradient-btn flex items-center justify-center text-black font-extrabold text-xl shadow-lg">
+                    AG
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-black tracking-tight text-white dark:text-white group-hover:text-brand-cyan transition-colors">
+                        ADNAN <span class="text-gradient">GRAPHICS</span>
+                    </span>
+                    <span class="font-urdu text-xs text-slate-400 dark:text-slate-400 -mt-1 leading-none">عدنان گرافکس</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-7 text-sm font-medium">
+                <a href="#home" class="text-slate-300 hover:text-brand-cyan transition-colors">Home</a>
+                <a href="#services" class="text-slate-300 hover:text-brand-cyan transition-colors">Services</a>
+                <a href="#calculator" class="text-slate-300 hover:text-brand-cyan transition-colors">Price Estimator</a>
+                <a href="#portfolio" class="text-slate-300 hover:text-brand-cyan transition-colors">Portfolio</a>
+                <a href="#about" class="text-slate-300 hover:text-brand-cyan transition-colors">Why Us</a>
+                <a href="#contact" class="text-slate-300 hover:text-brand-cyan transition-colors">Contact</a>
+            </nav>
+
+            <!-- Actions & Contact Quick Links -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="https://wa.me/923076101280?text=Hi%20Adnan%20Graphics,%20I%20want%20to%20inquire%20about%20your%20design%20and%20printing%20services." target="_blank" class="flex items-center gap-2 bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 px-3.5 py-2 rounded-xl text-sm font-semibold hover:bg-emerald-600 hover:text-white transition-all">
+                    <i class="fab fa-whatsapp text-base"></i> 03076101280
+                </a>
+                
+                <a href="#contact" class="gradient-btn text-black px-4 py-2 rounded-xl text-sm font-bold shadow-md">
+                    Get Quote
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-toggle" class="md:hidden text-slate-300 hover:text-white focus:outline-none p-2" aria-label="Toggle Navigation">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 bg-brand-card/95 px-6 py-6 space-y-4">
+            <a href="#home" class="mobile-link block text-slate-200 hover:text-brand-cyan text-base font-medium">Home</a>
+            <a href="#services" class="mobile-link block text-slate-200 hover:text-brand-cyan text-base font-medium">Services</a>
+            <a href="#calculator" class="mobile-link block text-slate-200 hover:text-brand-cyan text-base font-medium">Price Estimator</a>
+            <a href="#portfolio" class="mobile-link block text-slate-200 hover:text-brand-cyan text-base font-medium">Portfolio</a>
+            <a href="#about" class="mobile-link block text-slate-200 hover:text-brand-cyan text-base font-medium">Why Choose Us</a>
+            <a href="#contact" class="mobile-link block text-slate-200 hover:text-brand-cyan text-base font-medium">Contact & Order</a>
+            <div class="pt-4 flex flex-col gap-3">
+                <a href="https://wa.me/923076101280?text=Hi%20Adnan%20Graphics,%20I%20want%20to%20inquire%20about%20your%20services." target="_blank" class="w-full text-center bg-emerald-600 text-white py-2.5 rounded-xl text-sm font-bold flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp"></i> Chat 03076101280
+                </a>
+                <a href="mailto:adnangraphics946@gmail.com" class="w-full text-center bg-slate-800 text-brand-cyan py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2">
+                    <i class="fas fa-envelope"></i> adnangraphics946@gmail.com
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <!-- Glowing Orbs -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-cyan/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-80 h-80 bg-brand-purple/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Column -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-brand-cyan text-sm font-medium mb-6">
+                        <span class="w-2 h-2 rounded-full bg-brand-cyan animate-pulse"></span>
+                        Graphic Design & HD Flex Printing Studio
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-4">
+                        Bring Your Brand To Life With <span class="text-gradient">Creative Visuals</span>
+                    </h1>
+
+                    <p class="font-urdu text-xl text-slate-200 mb-4 leading-relaxed">
+                        ہماری اعلیٰ معیار کی گرافک ڈیزائننگ، کوریل ڈرا ویکٹر ورک اور فلیکس پرنٹنگ کے ساتھ اپنے کاروبار کو ممتاز بنائیں
+                    </p>
+
+                    <p class="text-slate-400 text-base sm:text-lg mb-8 max-w-2xl mx-auto lg:mx-0">
+                        From custom logo design and social media posts to high-resolution flex banners and stationery printing, Adnan Graphics delivers stunning artwork tailored for your success.
+                    </p>
+
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                        <a href="https://wa.me/923076101280?text=Hi%20Adnan%20Graphics,%20I%20want%20to%20place%20an%20order." target="_blank" class="gradient-btn text-black font-extrabold px-7 py-4 rounded-xl shadow-lg glow-effect flex items-center gap-2 text-base">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                            <span>Order via WhatsApp (03076101280)</span>
+                        </a>
+                        <a href="#calculator" class="glass-card hover:bg-slate-800 text-white font-semibold px-7 py-4 rounded-xl transition-all border border-slate-700 text-base">
+                            Calculate Print Cost
+                        </a>
+                    </div>
+
+                    <!-- Verified Info Badge Row -->
+                    <div class="mt-8 flex flex-wrap justify-center lg:justify-start items-center gap-6 text-xs text-slate-400">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-phone text-brand-cyan"></i>
+                            <span>03076101280</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-envelope text-brand-purple"></i>
+                            <span>adnangraphics946@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <!-- Metrics -->
+                    <div class="grid grid-cols-3 gap-6 mt-10 pt-8 border-t border-slate-800/80">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-white">1,500+</div>
+                            <div class="text-xs sm:text-sm text-slate-400 mt-1">Completed Designs</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-brand-cyan">100%</div>
+                            <div class="text-xs sm:text-sm text-slate-400 mt-1">Quality Satisfaction</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-white">8+ Yrs</div>
+                            <div class="text-xs sm:text-sm text-slate-400 mt-1">Design Experience</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual Showcase -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="glass-card p-4 rounded-2xl shadow-2xl relative z-20 border border-slate-700">
+                            <div class="relative rounded-xl overflow-hidden aspect-square bg-slate-900 group">
+                                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" alt="Adnan Graphics Artwork Showcase" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/800x800/151C28/00F2FE?text=Adnan+Graphics+Design'">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <span class="text-xs font-semibold uppercase tracking-wider text-brand-cyan">Branding & Print Studio</span>
+                                    <h3 class="text-lg font-bold text-white">Adnan Graphics Professional Setup</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Badges -->
+                        <div class="absolute -top-6 -left-6 z-30 glass-card p-3 rounded-xl flex items-center gap-3 shadow-xl border border-brand-cyan/30">
+                            <div class="w-10 h-10 rounded-lg bg-brand-cyan/20 flex items-center justify-center text-brand-cyan">
+                                <i class="fas fa-vector-square text-lg"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold text-white">CorelDRAW Vector</div>
+                                <div class="text-[10px] text-slate-400">CDR & Print Ready Files</div>
+                            </div>
+                        </div>
+
+                        <div class="absolute -bottom-6 -right-6 z-30 glass-card p-3 rounded-xl flex items-center gap-3 shadow-xl border border-brand-purple/30">
+                            <div class="w-10 h-10 rounded-lg bg-brand-purple/20 flex items-center justify-center text-brand-purple">
+                                <i class="fas fa-print text-lg"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold text-white">HD Flex Printing</div>
+                                <div class="text-[10px] text-slate-400">Shine & Durable Banner</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-950/60 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-cyan font-bold text-sm tracking-widest uppercase">Our Core Specializations</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Services We Provide</h2>
+                <p class="text-slate-400 mt-3 text-base">Combining creative design talent with high quality printing hardware.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-brand-cyan/50 transition-all group hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-cyan/20 to-blue-600/20 text-brand-cyan flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Logo & Brand Identity</h3>
+                    <p class="font-urdu text-sm text-brand-cyan/90 mb-3">لوگو اور برانڈ ڈیزائننگ</p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Distinctive corporate logos, vector brand identity kits, color themes, and letterheads.</p>
+                    <button onclick="selectServiceForQuote('Logo & Branding')" class="text-xs font-bold text-brand-cyan flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                        REQUEST QUOTE <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-brand-cyan/50 transition-all group hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500/20 to-brand-purple/20 text-brand-purple flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-scroll"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Flex & Banner Printing</h3>
+                    <p class="font-urdu text-sm text-brand-purple/90 mb-3">فلیکس اور پینا فلیکس پرنٹنگ</p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Large format panaflex printing, shop banners, billboards, and event backdrops with vivid colors.</p>
+                    <button onclick="selectServiceForQuote('Flex Printing')" class="text-xs font-bold text-brand-cyan flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                        REQUEST QUOTE <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-brand-cyan/50 transition-all group hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-500/20 to-rose-600/20 text-pink-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Visiting Cards & Stationery</h3>
+                    <p class="font-urdu text-sm text-pink-400/90 mb-3">وزٹنگ کارڈز اور اسٹیشنری</p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Matte, UV gloss, texture, and die-cut business visiting cards, bill books, and flyers.</p>
+                    <button onclick="selectServiceForQuote('Business Cards')" class="text-xs font-bold text-brand-cyan flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                        REQUEST QUOTE <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-brand-cyan/50 transition-all group hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500/20 to-orange-600/20 text-amber-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Social Media Posts Design</h3>
+                    <p class="font-urdu text-sm text-amber-400/90 mb-3">سوشل میڈیا پوسٹس ڈیزائن</p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Creative Facebook, Instagram, YouTube banners, ad banners, and WhatsApp status promos.</p>
+                    <button onclick="selectServiceForQuote('Social Media Graphics')" class="text-xs font-bold text-brand-cyan flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                        REQUEST QUOTE <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-brand-cyan/50 transition-all group hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-teal-600/20 text-emerald-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-bezier-curve"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">CorelDRAW & Vector Tracing</h3>
+                    <p class="font-urdu text-sm text-emerald-400/90 mb-3">کوریل ڈرا ویکٹر ٹریسنگ</p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Raster to vector conversion, precision CDR files for plotters, laser cutting, and offset printing.</p>
+                    <button onclick="selectServiceForQuote('Vector Conversion')" class="text-xs font-bold text-brand-cyan flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                        REQUEST QUOTE <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-brand-cyan/50 transition-all group hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 text-cyan-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Packaging & Sticker Labels</h3>
+                    <p class="font-urdu text-sm text-cyan-400/90 mb-3">پیکجنگ اور اسٹیکر لیبلز</p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Custom product box designs, waterproof sticker labels, pouch layouts, and die-lines.</p>
+                    <button onclick="selectServiceForQuote('Packaging Design')" class="text-xs font-bold text-brand-cyan flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                        REQUEST QUOTE <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Print Price Calculator Widget -->
+    <section id="calculator" class="py-16 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card p-8 rounded-3xl border border-brand-cyan/30 relative">
+                <div class="text-center mb-8">
+                    <span class="text-brand-cyan font-bold text-xs uppercase tracking-widest">Instant Estimation</span>
+                    <h3 class="text-2xl sm:text-3xl font-black text-white mt-1">Flex & Banner Print Cost Estimator</h3>
+                    <p class="font-urdu text-sm text-slate-300 mt-2">فلیکس پرنٹنگ کی قیمت معلوم کریں</p>
+                </div>
+
+                <div class="grid sm:grid-cols-3 gap-6 mb-6">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase mb-2">Width (Feet)</label>
+                        <input type="number" id="calc-width" value="10" min="1" max="100" oninput="calculateFlexCost()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:border-brand-cyan outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase mb-2">Height (Feet)</label>
+                        <input type="number" id="calc-height" value="4" min="1" max="100" oninput="calculateFlexCost()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:border-brand-cyan outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase mb-2">Quality Grade</label>
+                        <select id="calc-quality" onchange="calculateFlexCost()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:border-brand-cyan outline-none">
+                            <option value="35">Standard Flex (Rs. 35/sqft)</option>
+                            <option value="50" selected>Star HD Flex (Rs. 50/sqft)</option>
+                            <option value="80">Backlit Glow Sign (Rs. 80/sqft)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900/90 p-6 rounded-2xl border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div>
+                        <div class="text-xs text-slate-400">Total Print Area: <span id="calc-area" class="font-bold text-white">40</span> Sq. Ft.</div>
+                        <div class="text-2xl font-black text-brand-cyan mt-1">Estimated Cost: <span id="calc-total">Rs. 2,000</span></div>
+                    </div>
+                    <button onclick="orderCalculatedFlex()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3 rounded-xl text-sm flex items-center gap-2 transition-all">
+                        <i class="fab fa-whatsapp text-lg"></i> Order This Flex via WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <span class="text-brand-cyan font-bold text-sm tracking-widest uppercase">Our Design Portfolio</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Recent Works By Adnan Graphics</h2>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="flex flex-wrap gap-2 bg-slate-900/80 p-1.5 rounded-xl border border-slate-800">
+                    <button onclick="filterPortfolio('all')" class="filter-btn active text-xs font-semibold px-4 py-2 rounded-lg bg-brand-cyan text-black transition-all">All</button>
+                    <button onclick="filterPortfolio('branding')" class="filter-btn text-xs font-semibold px-4 py-2 rounded-lg text-slate-300 hover:text-white transition-all">Logos & Branding</button>
+                    <button onclick="filterPortfolio('flex')" class="filter-btn text-xs font-semibold px-4 py-2 rounded-lg text-slate-300 hover:text-white transition-all">Flex & Banners</button>
+                    <button onclick="filterPortfolio('cards')" class="filter-btn text-xs font-semibold px-4 py-2 rounded-lg text-slate-300 hover:text-white transition-all">Visiting Cards</button>
+                    <button onclick="filterPortfolio('digital')" class="filter-btn text-xs font-semibold px-4 py-2 rounded-lg text-slate-300 hover:text-white transition-all">Social Media</button>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div id="portfolio-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Item 1 -->
+                <div class="portfolio-item branding glass-card rounded-2xl overflow-hidden group border border-slate-800">
+                    <div class="relative aspect-video bg-slate-900 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=800&q=80" alt="Logo Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/800x600/151C28/00F2FE?text=Corporate+Logo'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6">
+                            <button onclick="openModal('Modern Brand Logo Design', 'Logos & Branding', 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=800&q=80')" class="w-12 h-12 rounded-full gradient-btn text-black flex items-center justify-center text-xl shadow-lg">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-bold text-brand-cyan uppercase tracking-wider">Logos & Branding</span>
+                        <h4 class="text-lg font-bold text-white mt-1">Modern Company Vector Identity</h4>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="portfolio-item flex glass-card rounded-2xl overflow-hidden group border border-slate-800">
+                    <div class="relative aspect-video bg-slate-900 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80" alt="Flex Printing Banner" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/800x600/151C28/00F2FE?text=Flex+Banner'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6">
+                            <button onclick="openModal('Grand Opening Shop Banner', 'Flex & Banners', 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80')" class="w-12 h-12 rounded-full gradient-btn text-black flex items-center justify-center text-xl shadow-lg">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-bold text-brand-purple uppercase tracking-wider">Flex & Banners</span>
+                        <h4 class="text-lg font-bold text-white mt-1">Shop Front HD Flex Design</h4>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="portfolio-item cards glass-card rounded-2xl overflow-hidden group border border-slate-800">
+                    <div class="relative aspect-video bg-slate-900 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80" alt="Visiting Card" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/800x600/151C28/00F2FE?text=Visiting+Card'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6">
+                            <button onclick="openModal('Gold Foil Matte Visiting Card', 'Visiting Cards', 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80')" class="w-12 h-12 rounded-full gradient-btn text-black flex items-center justify-center text-xl shadow-lg">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-bold text-pink-400 uppercase tracking-wider">Visiting Cards</span>
+                        <h4 class="text-lg font-bold text-white mt-1">Luxury Business Visiting Card</h4>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="portfolio-item digital glass-card rounded-2xl overflow-hidden group border border-slate-800">
+                    <div class="relative aspect-video bg-slate-900 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Social Media Artwork" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/800x600/151C28/00F2FE?text=Social+Post'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6">
+                            <button onclick="openModal('Social Media Promo Banner', 'Social Media', 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80')" class="w-12 h-12 rounded-full gradient-btn text-black flex items-center justify-center text-xl shadow-lg">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Social Media</span>
+                        <h4 class="text-lg font-bold text-white mt-1">Facebook & Instagram Post Design</h4>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="portfolio-item flex glass-card rounded-2xl overflow-hidden group border border-slate-800">
+                    <div class="relative aspect-video bg-slate-900 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542744094-3a31216914fc?auto=format&fit=crop&w=800&q=80" alt="Event Banner" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/800x600/151C28/00F2FE?text=Event+Backdrop'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6">
+                            <button onclick="openModal('Seminar Stage Backdrop Flex', 'Flex & Banners', 'https://images.unsplash.com/photo-1542744094-3a31216914fc?auto=format&fit=crop&w=800&q=80')" class="w-12 h-12 rounded-full gradient-btn text-black flex items-center justify-center text-xl shadow-lg">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-bold text-brand-purple uppercase tracking-wider">Flex & Banners</span>
+                        <h4 class="text-lg font-bold text-white mt-1">Stage Event Backdrop Banner</h4>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="portfolio-item branding glass-card rounded-2xl overflow-hidden group border border-slate-800">
+                    <div class="relative aspect-video bg-slate-900 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=800&q=80" alt="Menu Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/800x600/151C28/00F2FE?text=Restaurant+Menu'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6">
+                            <button onclick="openModal('Restaurant Menu & Identity', 'Logos & Branding', 'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=800&q=80')" class="w-12 h-12 rounded-full gradient-btn text-black flex items-center justify-center text-xl shadow-lg">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-bold text-brand-cyan uppercase tracking-wider">Logos & Branding</span>
+                        <h4 class="text-lg font-bold text-white mt-1">Food Brand Menu & Banner Design</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-950/80 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <span class="text-brand-cyan font-bold text-sm tracking-widest uppercase">Why Choose Us</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 mb-6">Fast, Affordable & Creative Printing Services</h2>
+                    
+                    <p class="text-slate-200 font-urdu leading-loose mb-6">
+                        عدنان گرافکس آپ کے تمام ڈیزائننگ اور پرنٹنگ کے کاموں کے لیے قابلِ اعتماد نام ہے۔ مناسب قیمت پر معیاری فلیکس، وزٹنگ کارڈ اور لوگو ڈیزائن بنوائیں۔
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg flex-shrink-0">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-base">Instant Contact</h4>
+                                <p class="text-slate-400 text-xs mt-1">Direct contact on WhatsApp 03076101280</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-cyan/20 text-brand-cyan flex items-center justify-center text-lg flex-shrink-0">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-base">Email Response</h4>
+                                <p class="text-slate-400 text-xs mt-1">adnangraphics946@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-purple/20 text-brand-purple flex items-center justify-center text-lg flex-shrink-0">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-base">Quick Delivery</h4>
+                                <p class="text-slate-400 text-xs mt-1">Fast vector rendering and printing</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg flex-shrink-0">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-base">Client Satisfaction</h4>
+                                <p class="text-slate-400 text-xs mt-1">Revisions till you approve the artwork</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="glass-card p-8 rounded-3xl border border-slate-800 relative z-10">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-14 h-14 rounded-2xl gradient-btn flex items-center justify-center text-black font-black text-2xl">
+                                AG
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Adnan Graphics Official</h3>
+                                <p class="text-xs text-brand-cyan">Graphic Designer & Printer</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 text-sm text-slate-300">
+                            <div class="flex items-center gap-3 bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                                <i class="fab fa-whatsapp text-emerald-400 text-lg"></i>
+                                <span>WhatsApp: <strong class="text-white">03076101280</strong></span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                                <i class="fas fa-envelope text-brand-cyan text-lg"></i>
+                                <span>Email: <strong class="text-white">adnangraphics946@gmail.com</strong></span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                                <i class="fas fa-clock text-brand-purple text-lg"></i>
+                                <span>Service: <strong class="text-white">Mon - Sat (10:00 AM - 10:00 PM)</strong></span>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-slate-800 text-center">
+                            <p class="font-urdu text-base text-brand-cyan">
+                                آپ کا پسندیدہ گرافک ڈیزائن اور پینا فلیکس سینٹر
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Direct Order Section -->
+    <section id="contact" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-cyan font-bold text-sm tracking-widest uppercase">Contact & Booking</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Get In Touch With Adnan Graphics</h2>
+                <p class="text-slate-400 mt-2">Send us your inquiry directly or message us on WhatsApp with details.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Sidebar Info -->
+                <div class="lg:col-span-5 space-y-6">
+                    
+                    <a href="https://wa.me/923076101280?text=Hi%20Adnan%20Graphics,%20I%20have%20a%20design/printing%20inquiry." target="_blank" class="block glass-card p-6 rounded-2xl border border-slate-800 hover:border-emerald-500/50 transition-all group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">WhatsApp Direct</h4>
+                                <p class="text-slate-400 text-xs mb-1">Click to start chat directly</p>
+                                <span class="text-emerald-400 font-extrabold text-base">03076101280</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="mailto:adnangraphics946@gmail.com" class="block glass-card p-6 rounded-2xl border border-slate-800 hover:border-brand-cyan/50 transition-all group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-cyan/20 text-brand-cyan flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Official Email</h4>
+                                <p class="text-slate-400 text-xs mb-1">Send requirements and raw files</p>
+                                <span class="text-brand-cyan font-extrabold text-sm sm:text-base break-all">adnangraphics946@gmail.com</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-purple/20 text-brand-purple flex items-center justify-center text-2xl">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Customer Support</h4>
+                                <p class="text-slate-400 text-xs">Fast turnaround time & polite consultation</p>
+                                <span class="font-urdu text-sm text-brand-cyan">تمام کام تسلی بخش کیے جاتے ہیں</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct WhatsApp Banner -->
+                    <div class="bg-gradient-to-r from-emerald-900/30 to-slate-900 p-6 rounded-2xl border border-emerald-500/30 text-center">
+                        <h4 class="font-urdu text-xl text-white font-bold mb-2">جلد آرڈر دینے کے لیے واٹس ایپ پر رابطہ کریں</h4>
+                        <p class="text-slate-300 text-xs mb-4">Click below to open WhatsApp chat with 03076101280</p>
+                        <a href="https://wa.me/923076101280?text=Hi%20Adnan%20Graphics,%20I%20want%20to%20discuss%20a%20new%20project." target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors shadow-lg">
+                            <i class="fab fa-whatsapp text-lg"></i> Open Chat on WhatsApp
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Interactive Quote Form -->
+                <div class="lg:col-span-7">
+                    <div class="glass-card p-8 rounded-3xl border border-slate-800 relative">
+                        
+                        <div id="form-alert" class="hidden mb-6 p-4 rounded-xl text-sm font-semibold"></div>
+
+                        <form id="quote-form" onsubmit="handleQuoteSubmit(event)" class="space-y-6">
+                            
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-slate-300 text-xs font-bold uppercase mb-2">Your Name *</label>
+                                    <input type="text" id="quote-name" required placeholder="e.g. Muhammad Ali" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-cyan transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-slate-300 text-xs font-bold uppercase mb-2">Your Phone / WhatsApp *</label>
+                                    <input type="tel" id="quote-phone" required placeholder="e.g. 0300 1234567" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-cyan transition-colors">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-slate-300 text-xs font-bold uppercase mb-2">Required Service *</label>
+                                <select id="quote-service" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-cyan transition-colors">
+                                    <option value="" disabled selected>Choose a Service...</option>
+                                    <option value="Logo & Branding">Logo & Brand Identity</option>
+                                    <option value="Flex Printing">Flex & Banner Printing</option>
+                                    <option value="Business Cards">Visiting / Business Cards</option>
+                                    <option value="Social Media Graphics">Social Media Posts</option>
+                                    <option value="Vector Conversion">Vector Tracing (CorelDRAW CDR)</option>
+                                    <option value="Packaging Design">Packaging & Sticker Labels</option>
+                                    <option value="Other">Custom Work</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-slate-300 text-xs font-bold uppercase mb-2">Project Details & Size (e.g. 10x4 Flex)</label>
+                                <textarea id="quote-details" rows="4" placeholder="Mention dimensions, quantity, colors, or your text requirements..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-cyan transition-colors"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full gradient-btn text-black font-extrabold py-4 rounded-xl shadow-lg text-base glow-effect flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp text-lg"></i>
+                                <span>Send Inquiry to WhatsApp (03076101280)</span>
+                            </button>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-slate-950 border-t border-slate-800/80 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                
+                <!-- Col 1 -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-9 h-9 rounded-lg gradient-btn flex items-center justify-center text-black font-black text-lg">
+                            AG
+                        </div>
+                        <span class="text-xl font-black text-white tracking-tight">ADNAN <span class="text-gradient">GRAPHICS</span></span>
+                    </div>
+                    <p class="text-slate-400 text-sm max-w-sm mb-4">
+                        Professional graphic design and printing studio. High definition flex printing, vector artwork, logos, business cards, and digital marketing banners.
+                    </p>
+                    <p class="font-urdu text-brand-cyan text-sm">
+                        عدنان گرافکس - کوالٹی ڈیزائننگ اور معیاری پرنٹنگ
+                    </p>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h5 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Quick Links</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="text-slate-400 hover:text-brand-cyan transition-colors">Home</a></li>
+                        <li><a href="#services" class="text-slate-400 hover:text-brand-cyan transition-colors">Services</a></li>
+                        <li><a href="#calculator" class="text-slate-400 hover:text-brand-cyan transition-colors">Price Estimator</a></li>
+                        <li><a href="#portfolio" class="text-slate-400 hover:text-brand-cyan transition-colors">Portfolio</a></li>
+                        <li><a href="#contact" class="text-slate-400 hover:text-brand-cyan transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Direct Contact Details -->
+                <div>
+                    <h5 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Contact Info</h5>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-2 text-slate-300">
+                            <i class="fab fa-whatsapp text-emerald-400"></i>
+                            <a href="https://wa.me/923076101280" target="_blank" class="hover:underline">03076101280</a>
+                        </li>
+                        <li class="flex items-center gap-2 text-slate-300">
+                            <i class="fas fa-envelope text-brand-cyan"></i>
+                            <a href="mailto:adnangraphics946@gmail.com" class="hover:underline break-all">adnangraphics946@gmail.com</a>
+                        </li>
+                        <li class="text-xs text-slate-500 pt-2">
+                            Graphic Design Studio & Flex Printing Press
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-slate-900 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>&copy; <span id="year-text"></span> Adnan Graphics (عدنان گرافکس). All rights reserved.</p>
+                <p>Designed with Excellence</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Floating WhatsApp Quick Bar -->
+    <a href="https://wa.me/923076101280?text=Hi%20Adnan%20Graphics,%20I%20want%20to%20place%20an%20order." target="_blank" class="fixed bottom-6 right-6 z-50 bg-emerald-600 hover:bg-emerald-500 text-white font-bold p-3.5 sm:px-5 sm:py-3 rounded-full shadow-2xl flex items-center gap-3 transition-transform hover:scale-105 border border-emerald-400/40">
+        <i class="fab fa-whatsapp text-2xl"></i>
+        <span class="hidden sm:inline text-sm">WhatsApp 03076101280</span>
+    </a>
+
+    <!-- Modal Lightbox -->
+    <div id="image-modal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="relative max-w-4xl w-full glass-card p-4 rounded-2xl border border-slate-700">
+            <button onclick="closeModal()" class="absolute -top-4 -right-4 w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center hover:bg-rose-600 transition-colors shadow-lg z-10">
+                <i class="fas fa-times text-lg"></i>
+            </button>
+            <div class="rounded-xl overflow-hidden max-h-[75vh] bg-black flex items-center justify-center">
+                <img id="modal-img" src="" alt="Preview" class="max-h-[75vh] w-auto object-contain">
+            </div>
+            <div class="mt-4 flex items-center justify-between">
+                <div>
+                    <h3 id="modal-title" class="text-lg font-bold text-white"></h3>
+                    <p id="modal-category" class="text-xs text-brand-cyan uppercase font-semibold"></p>
+                </div>
+                <a id="modal-wa-btn" href="#" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-2">
+                    <i class="fab fa-whatsapp"></i> Order Similar Design
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set year
+        document.getElementById('year-text').innerText = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const menuToggleBtn = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuToggleBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Flex Price Calculator Logic
+        function calculateFlexCost() {
+            const width = parseFloat(document.getElementById('calc-width').value) || 0;
+            const height = parseFloat(document.getElementById('calc-height').value) || 0;
+            const rate = parseFloat(document.getElementById('calc-quality').value) || 0;
+
+            const sqft = width * height;
+            const totalCost = sqft * rate;
+
+            document.getElementById('calc-area').innerText = sqft;
+            document.getElementById('calc-total').innerText = 'Rs. ' + totalCost.toLocaleString();
+        }
+
+        function orderCalculatedFlex() {
+            const width = document.getElementById('calc-width').value;
+            const height = document.getElementById('calc-height').value;
+            const sqft = width * height;
+            const rateSelect = document.getElementById('calc-quality');
+            const qualityName = rateSelect.options[rateSelect.selectedIndex].text;
+            const total = document.getElementById('calc-total').innerText;
+
+            const msg = `Hi Adnan Graphics! I calculated a Flex Printing order:%0A- Size: ${width}x${height} Feet (${sqft} Sq.Ft)%0A- Quality: ${qualityName}%0A- Estimated Cost: ${total}`;
+            window.open(`https://wa.me/923076101280?text=${msg}`, '_blank');
+        }
+
+        // Portfolio Filter
+        function filterPortfolio(category) {
+            const items = document.querySelectorAll('.portfolio-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-cyan', 'text-black');
+                btn.classList.add('text-slate-300');
+            });
+
+            event.currentTarget.classList.add('bg-brand-cyan', 'text-black');
+            event.currentTarget.classList.remove('text-slate-300');
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Quick Service Selection to Quote Form
+        function selectServiceForQuote(serviceName) {
+            const serviceSelect = document.getElementById('quote-service');
+            serviceSelect.value = serviceName;
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Form Submit Handler -> Redirects to WhatsApp (03076101280)
+        function handleQuoteSubmit(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('quote-name').value;
+            const phone = document.getElementById('quote-phone').value;
+            const service = document.getElementById('quote-service').value;
+            const details = document.getElementById('quote-details').value;
+
+            const alertBox = document.getElementById('form-alert');
+            alertBox.className = 'mb-6 p-4 rounded-xl text-sm font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30';
+            alertBox.innerText = 'Opening WhatsApp (03076101280) with your request details...';
+            alertBox.classList.remove('hidden');
+
+            const message = `Hello Adnan Graphics!%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Service:* ${encodeURIComponent(service)}%0A*Details:* ${encodeURIComponent(details || 'N/A')}`;
+
+            setTimeout(() => {
+                window.open(`https://wa.me/923076101280?text=${message}`, '_blank');
+            }, 800);
+        }
+
+        // Modal Logic
+        function openModal(title, category, imgUrl) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-category').innerText = category;
+            document.getElementById('modal-img').src = imgUrl;
+
+            const waMsg = `Hi Adnan Graphics, I am interested in ordering design work like "${title}" (${category}).`;
+            document.getElementById('modal-wa-btn').href = `https://wa.me/923076101280?text=${encodeURIComponent(waMsg)}`;
+
+            document.getElementById('image-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('image-modal').classList.add('hidden');
+        }
+
+        document.getElementById('image-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
